@@ -1,15 +1,8 @@
 <template>
-  <card-component title="Edit Profile" icon="account-circle">
+  <card-component title="Change Settings" icon="settings">
     <form @submit.prevent="submit">
-      <b-field horizontal label="Avatar">
-        <file-picker/>
-      </b-field>
-      <hr>
-      <b-field horizontal label="Name" message="Required. Your name">
-        <b-input v-model="form.name" name="name" required/>
-      </b-field>
-      <b-field horizontal label="E-mail" message="Required. Your e-mail">
-        <b-input v-model="form.email" name="email" type="email" required/>
+      <b-field horizontal label="Automatic Mode">
+        <b-switch v-model="form.mode" name="mode"/>
       </b-field>
       <hr>
       <b-field horizontal>
@@ -25,14 +18,12 @@
 
 <script>
 import { mapState } from 'vuex'
-import FilePicker from '@/components/FilePicker'
 import CardComponent from '@/components/CardComponent'
 
 export default {
   name: 'ProfileUpdateForm',
   components: {
-    CardComponent,
-    FilePicker
+    CardComponent
   },
   data () {
     return {

@@ -41,7 +41,7 @@ export default {
           },
           {
             to: '/settings',
-            label: 'settings',
+            label: 'Settings',
             icon: 'settings'
           }
         ]
