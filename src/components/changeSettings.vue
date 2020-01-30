@@ -21,29 +21,26 @@ import { mapState } from 'vuex'
 import CardComponent from '@/components/CardComponent'
 
 export default {
-  name: 'ProfileUpdateForm',
+  name: 'changeSettings',
   components: {
     CardComponent
   },
   data () {
     return {
-      isFileUploaded: false,
       isLoading: false,
       form: {
-        name: null,
-        email: null
+        mode: null
       }
     }
   },
   computed: {
     ...mapState([
-      'userName',
-      'userEmail'
+      'automaticMode'
     ])
   },
   mounted () {
-    this.form.name = this.userName
-    this.form.email = this.userEmail
+    this.form.mode = this.mode
+    console.log(this.form.mode)
   },
   methods: {
     submit () {
@@ -59,11 +56,8 @@ export default {
     }
   },
   watch: {
-    userName (newValue) {
-      this.form.name = newValue
-    },
-    userEmail (newValue) {
-      this.form.email = newValue
+    automaticMode (newValue) {
+      this.form.mode = newValue
     }
   }
 }

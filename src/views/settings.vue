@@ -8,7 +8,7 @@
     </hero-bar>
     <section class="section is-main-section">
       <tiles>
-        <profile-update-form class="tile is-child"/>
+        <change-settings class="tile is-child"/>
       </tiles>
     </section>
   </div>
@@ -17,15 +17,15 @@
 <script>
 import { mapState } from 'vuex'
 import HeroBar from '@/components/HeroBar'
-import ProfileUpdateForm from '@/components/ProfileUpdateForm'
+import Tiles from '@/components/Tiles'
+import changeSettings from '@/components/changeSettings'
 
 export default {
-  name: 'Profile',
-  components: { ProfileUpdateForm, HeroBar },
+  name: 'settings',
+  components: { changeSettings, HeroBar, Tiles },
   computed: {
     ...mapState([
-      'userName',
-      'userEmail'
+      'mode'
     ])
   }
 }

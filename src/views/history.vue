@@ -13,9 +13,6 @@
 
       <hr>
 
-      <card-component class="has-table">
-        <clients-table-sample/>
-      </card-component>
     </section>
   </div>
 
@@ -26,7 +23,7 @@ import ClientsTableSample from '@/components/ClientsTableSample'
 import CardComponent from '@/components/CardComponent'
 import HeroBar from '@/components/HeroBar'
 export default {
-  name: 'Tables',
+  name: 'History',
   components: { HeroBar, CardComponent, ClientsTableSample },
   computed: {
     titleStack () {
