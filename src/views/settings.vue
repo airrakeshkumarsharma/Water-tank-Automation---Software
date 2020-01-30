@@ -25,7 +25,7 @@ export default {
   components: { changeSettings, HeroBar, Tiles },
   computed: {
     ...mapState([
-      'mode'
+      'automaticMode'
     ])
   }
 }
