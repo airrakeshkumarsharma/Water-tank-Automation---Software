@@ -23,9 +23,14 @@ import changeSettings from '@/components/changeSettings'
 export default {
   name: 'settings',
   components: { changeSettings, HeroBar, Tiles },
+  data () {
+    return {
+      mode: false
+    }
+  },
   computed: {
     ...mapState([
-      'automaticMode'
+      'mode'
     ])
   }
 }
