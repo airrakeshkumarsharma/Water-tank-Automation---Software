@@ -14,27 +14,24 @@
       :data="clients">
 
       <template slot-scope="props">
-        <b-table-column class="has-no-head-mobile is-image-cell">
+        <!-- <b-table-column class="has-no-head-mobile is-image-cell">
           <div class="image">
             <img :src="props.row.file" class="is-rounded">
           </div>
-        </b-table-column>
-        <b-table-column label="Name" field="name" sortable>
+        </b-table-column> -->
+        <b-table-column label="Responsible Name" field="name" sortable>
           {{ props.row.name }}
         </b-table-column>
-        <b-table-column label="Company" field="company" sortable>
-          {{ props.row.company }}
-        </b-table-column>
-        <b-table-column label="City" field="city" sortable>
+        <b-table-column label="Location" field="city" sortable>
           {{ props.row.city }}
         </b-table-column>
-        <b-table-column class="is-progress-col" label="Progress" field="progress" sortable>
+        <b-table-column class="is-progress-col" label="Used( in Lt.)" field="progress" sortable>
           <progress class="progress is-small is-primary" :value="props.row.progress" max="100">{{ props.row.progress }}</progress>
         </b-table-column>
-        <b-table-column label="Created">
+        <b-table-column label="Date">
           <small class="has-text-grey is-abbr-like" :title="props.row.created">{{ props.row.created }}</small>
         </b-table-column>
-        <b-table-column custom-key="actions" class="is-actions-cell">
+        <!-- <b-table-column custom-key="actions" class="is-actions-cell">
           <div class="buttons is-right">
             <router-link :to="{name:'client.edit', params: {id: props.row.id}}" class="button is-small is-primary">
               <b-icon icon="account-edit" size="is-small"/>
@@ -43,7 +40,7 @@
               <b-icon icon="trash-can" size="is-small"/>
             </button>
           </div>
-        </b-table-column>
+        </b-table-column> -->
       </template>
 
       <section class="section" slot="empty">

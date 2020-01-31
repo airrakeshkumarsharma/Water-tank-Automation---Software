@@ -7,7 +7,7 @@
       </router-link>
     </hero-bar>
     <section class="section is-main-section">
-      <card-component class="has-table has-mobile-sort-spaced" title="Clients" icon="account-multiple">
+      <card-component class="has-table has-mobile-sort-spaced" title="Water Uses Report" icon="account-multiple">
         <clients-table-sample data-url="/data-sources/clients.json" :checkable="true"/>
       </card-component>
 

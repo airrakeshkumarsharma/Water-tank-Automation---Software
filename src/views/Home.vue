@@ -68,7 +68,6 @@ export default {
   methods: {
     randomChartData (n) {
       let data = []
-
       for (let i = 0; i < n; i++) {
         data.push(Math.round(Math.random() * 200))
       }
