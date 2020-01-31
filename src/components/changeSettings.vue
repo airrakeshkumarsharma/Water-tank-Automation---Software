@@ -4,6 +4,9 @@
       <b-field horizontal label="Automatic Mode">
         <b-switch v-model="form.mode" name="mode"/>
       </b-field>
+      <b-field horizontal label="Motor Controller">
+        <b-switch v-model="form.motor" name="motor"/>
+      </b-field>
       <hr>
       <b-field horizontal>
         <div class="control">
